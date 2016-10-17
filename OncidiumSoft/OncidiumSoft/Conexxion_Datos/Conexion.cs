@@ -8,5 +8,13 @@ namespace OncidiumSoft.Conexxion_Datos
 {
     class Conexion
     {
+        public void conextar()
+        {
+
+        }
+        public void cerrar()
+        {
+
+        }
     }
 }
