@@ -10,8 +10,14 @@ namespace OncidiumSoft.Conexxion_Datos
 {
     class Conexion
     {
+        /// <summary>
+        /// Objeto para la conexion a la base de datos
+        /// </summary>
         public MySqlConnection cConexion = new MySqlConnection();
 
+        /// <summary>
+        /// Metodo para conectarse a la base de datos
+        /// </summary>
         public void Conectar()
         {
             string strCadenaConexion;
@@ -19,7 +25,9 @@ namespace OncidiumSoft.Conexxion_Datos
             cConexion.ConnectionString = strCadenaConexion;
             cConexion.Open();
         }
-
+        /// <summary>
+        /// Metodo para cerrar la conexion a la base de datos
+        /// </summary>
         public void Cerrar()
         {
             cConexion.Close();
