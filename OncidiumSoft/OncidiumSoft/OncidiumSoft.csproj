@@ -51,6 +51,12 @@
     <Compile Include="Conexxion_Datos\Conexion.cs" />
     <Compile Include="Daos\Cls_DaoEjemplo.cs" />
     <Compile Include="Daos\Cls_DaoPedidos.cs" />
+    <Compile Include="Formularios\frmAjusteInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAjusteInventario.Designer.cs">
+      <DependentUpon>frmAjusteInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmContabilidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <Compile Include="Objetos\Cls_Ejmeplo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frmAjusteInventario.resx">
+      <DependentUpon>frmAjusteInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmContabilidad.resx">
       <DependentUpon>frmContabilidad.cs</DependentUpon>
     </EmbeddedResource>
