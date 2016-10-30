@@ -16,5 +16,10 @@ namespace OncidiumSoft
         {
             InitializeComponent();
         }
+
+        private void VentasFecha_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

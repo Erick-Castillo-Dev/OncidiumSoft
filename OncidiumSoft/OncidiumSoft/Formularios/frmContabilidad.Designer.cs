@@ -209,7 +209,7 @@
             this.Controls.Add(this.lblGastosGenerales);
             this.Controls.Add(this.lblVentas);
             this.Name = "frmContabilidad";
-            this.Text = "frmContabilidad";
+            this.Text = "Contabilidad";
             this.ResumeLayout(false);
             this.PerformLayout();
 
