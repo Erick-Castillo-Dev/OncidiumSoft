@@ -49,8 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexxion_Datos\Conexion.cs" />
-    <Compile Include="Daos\Cls_DaoEjemplo.cs" />
     <Compile Include="Daos\Cls_DaoPedidos.cs" />
+    <Compile Include="Daos\Cls_DaoVentas.cs" />
     <Compile Include="Formularios\frmAjusteInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,7 +87,15 @@
     <Compile Include="Formularios\frmPedidos.Designer.cs">
       <DependentUpon>frmPedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Objetos\Cls_Ejmeplo.cs" />
+    <Compile Include="Formularios\FrmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmVentas.Designer.cs">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objetos\Cls_Detalles_Ventas.cs" />
+    <Compile Include="Objetos\Cls_Producto.cs" />
+    <Compile Include="Objetos\Cls_Ventas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\frmAjusteInventario.resx">
@@ -107,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPedidos.resx">
       <DependentUpon>frmPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmVentas.resx">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,6 +144,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12283043_773212156137905_384527972_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
