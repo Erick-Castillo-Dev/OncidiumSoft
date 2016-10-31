@@ -31,7 +31,7 @@
             this.GastosGenerales = new System.Windows.Forms.Button();
             this.lblFechaA = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblInversionT = new System.Windows.Forms.Label();
             this.lblVentasT = new System.Windows.Forms.Label();
             this.txtGastosGenerales = new System.Windows.Forms.TextBox();
             this.btnHistorial = new System.Windows.Forms.Button();
@@ -44,6 +44,7 @@
             this.lblInversion = new System.Windows.Forms.Label();
             this.lblGastosGenerales = new System.Windows.Forms.Label();
             this.lblVentas = new System.Windows.Forms.Label();
+            this.btnCalcularInversion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // GastosGenerales
@@ -55,6 +56,7 @@
             this.GastosGenerales.Size = new System.Drawing.Size(20, 20);
             this.GastosGenerales.TabIndex = 32;
             this.GastosGenerales.UseVisualStyleBackColor = false;
+            this.GastosGenerales.Click += new System.EventHandler(this.GastosGenerales_Click);
             // 
             // lblFechaA
             // 
@@ -74,14 +76,14 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "0.00";
             // 
-            // label1
+            // lblInversionT
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(115, 121);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "0.00";
+            this.lblInversionT.AutoSize = true;
+            this.lblInversionT.Location = new System.Drawing.Point(115, 121);
+            this.lblInversionT.Name = "lblInversionT";
+            this.lblInversionT.Size = new System.Drawing.Size(28, 13);
+            this.lblInversionT.TabIndex = 29;
+            this.lblInversionT.Text = "0.00";
             // 
             // lblVentasT
             // 
@@ -94,6 +96,8 @@
             // 
             // txtGastosGenerales
             // 
+            this.txtGastosGenerales.AccessibleName = "";
+            this.txtGastosGenerales.Enabled = false;
             this.txtGastosGenerales.Location = new System.Drawing.Point(133, 61);
             this.txtGastosGenerales.Name = "txtGastosGenerales";
             this.txtGastosGenerales.Size = new System.Drawing.Size(100, 20);
@@ -107,6 +111,7 @@
             this.btnHistorial.TabIndex = 26;
             this.btnHistorial.Text = "Ver historial";
             this.btnHistorial.UseVisualStyleBackColor = true;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
             // btnCancelar
             // 
@@ -116,6 +121,7 @@
             this.btnCancelar.TabIndex = 25;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnCalcular
             // 
@@ -129,9 +135,11 @@
             // txtSalarios
             // 
             this.txtSalarios.Location = new System.Drawing.Point(330, 61);
+            this.txtSalarios.MaxLength = 8;
             this.txtSalarios.Name = "txtSalarios";
             this.txtSalarios.Size = new System.Drawing.Size(100, 20);
             this.txtSalarios.TabIndex = 23;
+            this.txtSalarios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalarios_KeyPress);
             // 
             // lblSalarios
             // 
@@ -187,15 +195,26 @@
             this.lblVentas.TabIndex = 17;
             this.lblVentas.Text = "Ventas:       $";
             // 
+            // btnCalcularInversion
+            // 
+            this.btnCalcularInversion.Location = new System.Drawing.Point(330, 91);
+            this.btnCalcularInversion.Name = "btnCalcularInversion";
+            this.btnCalcularInversion.Size = new System.Drawing.Size(101, 23);
+            this.btnCalcularInversion.TabIndex = 33;
+            this.btnCalcularInversion.Text = "Calcular inversion";
+            this.btnCalcularInversion.UseVisualStyleBackColor = true;
+            this.btnCalcularInversion.Click += new System.EventHandler(this.btnCalcularInversion_Click);
+            // 
             // frmContabilidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 240);
+            this.ClientSize = new System.Drawing.Size(466, 240);
+            this.Controls.Add(this.btnCalcularInversion);
             this.Controls.Add(this.GastosGenerales);
             this.Controls.Add(this.lblFechaA);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblInversionT);
             this.Controls.Add(this.lblVentasT);
             this.Controls.Add(this.txtGastosGenerales);
             this.Controls.Add(this.btnHistorial);
@@ -210,6 +229,7 @@
             this.Controls.Add(this.lblVentas);
             this.Name = "frmContabilidad";
             this.Text = "Contabilidad";
+            this.Load += new System.EventHandler(this.frmContabilidad_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,9 +240,8 @@
         private System.Windows.Forms.Button GastosGenerales;
         private System.Windows.Forms.Label lblFechaA;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblInversionT;
         private System.Windows.Forms.Label lblVentasT;
-        private System.Windows.Forms.TextBox txtGastosGenerales;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnCalcular;
@@ -233,5 +252,7 @@
         private System.Windows.Forms.Label lblInversion;
         private System.Windows.Forms.Label lblGastosGenerales;
         private System.Windows.Forms.Label lblVentas;
+        public System.Windows.Forms.TextBox txtGastosGenerales;
+        private System.Windows.Forms.Button btnCalcularInversion;
     }
 }
