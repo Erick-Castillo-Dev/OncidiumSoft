@@ -1,6 +1,6 @@
 ﻿namespace OncidiumSoft
 {
-    partial class Form1
+    partial class FrmPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -152,7 +152,7 @@
             this.ventasPorMesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.ventasPorMesToolStripMenuItem.Text = "Ventas por mes";
             // 
-            // Form1
+            // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,7 +160,7 @@
             this.ClientSize = new System.Drawing.Size(896, 325);
             this.Controls.Add(this.idempleado);
             this.Controls.Add(this.menuPrincipal);
-            this.Name = "Form1";
+            this.Name = "FrmPrincipal";
             this.Text = "OncidiumSoft";
             this.menuPrincipal.ResumeLayout(false);
             this.menuPrincipal.PerformLayout();
