@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OncidiumSoft.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,12 @@ namespace OncidiumSoft
         private void VentasFecha_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void VentasDia_Click(object sender, EventArgs e)
+        {
+            frmReporteCalendario obj = new frmReporteCalendario();
+            obj.Show();
         }
     }
 }
