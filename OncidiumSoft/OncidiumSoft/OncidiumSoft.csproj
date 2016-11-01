@@ -51,6 +51,7 @@
     <Compile Include="Conexxion_Datos\Conexion.cs" />
     <Compile Include="Daos\Cls_DaoAjusteInventario.cs" />
     <Compile Include="Daos\Cls_DaoCompras.cs" />
+    <Compile Include="Daos\Cls_DaoContabilidad.cs" />
     <Compile Include="Daos\Cls_DaoPedidos.cs" />
     <Compile Include="Daos\Cls_DaoVentas.cs" />
     <Compile Include="Formularios\frmAjusteInventario.cs">
@@ -107,6 +108,7 @@
     <Compile Include="Formularios\FrmVentas.Designer.cs">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Objetos\ClsContabilidad.cs" />
     <Compile Include="Objetos\Cls_AjusteInventario.cs" />
     <Compile Include="Objetos\Cls_Compras.cs" />
     <Compile Include="Objetos\Cls_Detalles_Ventas.cs" />
