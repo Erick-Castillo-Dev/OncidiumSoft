@@ -35,12 +35,6 @@ namespace OncidiumSoft.Formularios
             new frmGastosEspecificos().Show();
         }
 
-        private void btnCalcularInversion_Click(object sender, EventArgs e)
-        {
-            Inversion = double.Parse(txtGastosGenerales.Text) + double.Parse(txtSalarios.Text);
-            lblInversionT.Text = Inversion.ToString();
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             txtGastosGenerales.Clear();
@@ -57,6 +51,12 @@ namespace OncidiumSoft.Formularios
             }
             else
                 e.Handled = false;
+        }
+
+        private void btnCalcularInversion_Click(object sender, EventArgs e)
+        {
+            Inversion = double.Parse(txtGastosGenerales.Text) + double.Parse(txtSalarios.Text);
+            lblInversionT.Text = Inversion.ToString();
         }
 
     }
