@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OncidiumSoft
+namespace OncidiumSoft.Formularios
 {
-    public partial class Form1 : Form
+    public partial class Agregar_Productos : Form
     {
-        public Form1()
+        public Agregar_Productos()
         {
             InitializeComponent();
         }

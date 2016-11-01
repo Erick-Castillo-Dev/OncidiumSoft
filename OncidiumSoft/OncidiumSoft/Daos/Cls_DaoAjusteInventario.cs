@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OncidiumSoft.Objetos
+namespace OncidiumSoft.Daos
 {
-    class Cls_Ejmeplo
+    class Cls_DaoAjusteInventario
     {
     }
 }
