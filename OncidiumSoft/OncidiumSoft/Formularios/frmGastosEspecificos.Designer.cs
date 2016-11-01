@@ -30,7 +30,7 @@
         {
             this.btnCancelarGastos = new System.Windows.Forms.Button();
             this.btnAceptarGastos = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtImprevistos = new System.Windows.Forms.TextBox();
             this.lblGastosImprevistos = new System.Windows.Forms.Label();
             this.txtGastosLuz = new System.Windows.Forms.TextBox();
             this.lblGastosLuz = new System.Windows.Forms.Label();
@@ -52,6 +52,7 @@
             this.btnCancelarGastos.TabIndex = 27;
             this.btnCancelarGastos.Text = "Cancelar";
             this.btnCancelarGastos.UseVisualStyleBackColor = true;
+            this.btnCancelarGastos.Click += new System.EventHandler(this.btnCancelarGastos_Click);
             // 
             // btnAceptarGastos
             // 
@@ -61,13 +62,16 @@
             this.btnAceptarGastos.TabIndex = 26;
             this.btnAceptarGastos.Text = "Aceptar";
             this.btnAceptarGastos.UseVisualStyleBackColor = true;
+            this.btnAceptarGastos.Click += new System.EventHandler(this.btnAceptarGastos_Click);
             // 
-            // textBox1
+            // txtImprevistos
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 214);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 25;
+            this.txtImprevistos.Location = new System.Drawing.Point(149, 214);
+            this.txtImprevistos.MaxLength = 8;
+            this.txtImprevistos.Name = "txtImprevistos";
+            this.txtImprevistos.Size = new System.Drawing.Size(100, 20);
+            this.txtImprevistos.TabIndex = 25;
+            this.txtImprevistos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImprevistos_KeyPress);
             // 
             // lblGastosImprevistos
             // 
@@ -81,9 +85,11 @@
             // txtGastosLuz
             // 
             this.txtGastosLuz.Location = new System.Drawing.Point(149, 175);
+            this.txtGastosLuz.MaxLength = 8;
             this.txtGastosLuz.Name = "txtGastosLuz";
             this.txtGastosLuz.Size = new System.Drawing.Size(100, 20);
             this.txtGastosLuz.TabIndex = 23;
+            this.txtGastosLuz.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGastosLuz_KeyPress);
             // 
             // lblGastosLuz
             // 
@@ -97,9 +103,11 @@
             // txtGastosAgua
             // 
             this.txtGastosAgua.Location = new System.Drawing.Point(149, 136);
+            this.txtGastosAgua.MaxLength = 8;
             this.txtGastosAgua.Name = "txtGastosAgua";
             this.txtGastosAgua.Size = new System.Drawing.Size(100, 20);
             this.txtGastosAgua.TabIndex = 21;
+            this.txtGastosAgua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGastosAgua_KeyPress);
             // 
             // lblGastosAgua
             // 
@@ -113,9 +121,11 @@
             // txtGastosGasolina
             // 
             this.txtGastosGasolina.Location = new System.Drawing.Point(148, 97);
+            this.txtGastosGasolina.MaxLength = 8;
             this.txtGastosGasolina.Name = "txtGastosGasolina";
             this.txtGastosGasolina.Size = new System.Drawing.Size(100, 20);
             this.txtGastosGasolina.TabIndex = 19;
+            this.txtGastosGasolina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGastosGasolina_KeyPress);
             // 
             // lblGastosGasolina
             // 
@@ -129,9 +139,11 @@
             // txtGastosInsecticidas
             // 
             this.txtGastosInsecticidas.Location = new System.Drawing.Point(148, 58);
+            this.txtGastosInsecticidas.MaxLength = 8;
             this.txtGastosInsecticidas.Name = "txtGastosInsecticidas";
             this.txtGastosInsecticidas.Size = new System.Drawing.Size(100, 20);
             this.txtGastosInsecticidas.TabIndex = 17;
+            this.txtGastosInsecticidas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGastosInsecticidas_KeyPress);
             // 
             // lblGastosInsecticidas
             // 
@@ -145,9 +157,11 @@
             // txtGastosFertilizantes
             // 
             this.txtGastosFertilizantes.Location = new System.Drawing.Point(148, 19);
+            this.txtGastosFertilizantes.MaxLength = 8;
             this.txtGastosFertilizantes.Name = "txtGastosFertilizantes";
             this.txtGastosFertilizantes.Size = new System.Drawing.Size(100, 20);
             this.txtGastosFertilizantes.TabIndex = 15;
+            this.txtGastosFertilizantes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGastosFertilizantes_KeyPress);
             // 
             // lblGastosFertilizantes
             // 
@@ -165,7 +179,7 @@
             this.ClientSize = new System.Drawing.Size(266, 303);
             this.Controls.Add(this.btnCancelarGastos);
             this.Controls.Add(this.btnAceptarGastos);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtImprevistos);
             this.Controls.Add(this.lblGastosImprevistos);
             this.Controls.Add(this.txtGastosLuz);
             this.Controls.Add(this.lblGastosLuz);
@@ -188,17 +202,17 @@
 
         private System.Windows.Forms.Button btnCancelarGastos;
         private System.Windows.Forms.Button btnAceptarGastos;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblGastosImprevistos;
-        private System.Windows.Forms.TextBox txtGastosLuz;
         private System.Windows.Forms.Label lblGastosLuz;
-        private System.Windows.Forms.TextBox txtGastosAgua;
         private System.Windows.Forms.Label lblGastosAgua;
-        private System.Windows.Forms.TextBox txtGastosGasolina;
         private System.Windows.Forms.Label lblGastosGasolina;
-        private System.Windows.Forms.TextBox txtGastosInsecticidas;
         private System.Windows.Forms.Label lblGastosInsecticidas;
-        private System.Windows.Forms.TextBox txtGastosFertilizantes;
         private System.Windows.Forms.Label lblGastosFertilizantes;
+        public System.Windows.Forms.TextBox txtImprevistos;
+        public System.Windows.Forms.TextBox txtGastosLuz;
+        public System.Windows.Forms.TextBox txtGastosAgua;
+        public System.Windows.Forms.TextBox txtGastosGasolina;
+        public System.Windows.Forms.TextBox txtGastosInsecticidas;
+        public System.Windows.Forms.TextBox txtGastosFertilizantes;
     }
 }

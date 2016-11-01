@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OncidiumSoft.Daos
+namespace OncidiumSoft.Objetos
 {
-    class Cls_DaoEjemplo
+    class Cls_Compras
     {
     }
 }
