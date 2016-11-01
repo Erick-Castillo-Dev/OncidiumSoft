@@ -50,6 +50,12 @@
   <ItemGroup>
     <Compile Include="Conexxion_Datos\Conexion.cs" />
     <Compile Include="Daos\Cls_DaoEjemplo.cs" />
+    <Compile Include="Formularios\Administracion_Provedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Administracion_Provedores.Designer.cs">
+      <DependentUpon>Administracion_Provedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,9 @@
     <Compile Include="Objetos\Cls_Ejmeplo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Administracion_Provedores.resx">
+      <DependentUpon>Administracion_Provedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
