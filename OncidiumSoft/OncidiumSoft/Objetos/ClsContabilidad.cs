@@ -3,30 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-using System.Data;
 
 namespace OncidiumSoft.Objetos
 {
     class ClsContabilidad
     {
-        # region "ATRIBUTOS DE CONTABILIDAD"
+        /// <summary>
+        /// Creación de los atributos para la contabilidad
+        /// </summary>
         private int pidContabilidad;
         private DateTime pFechaInicio;
         private DateTime pFechaFin;
         private double pGanancia_Perdida;
-        #endregion
 
-        # region "OBTENER CONEXION PARA UTILIZAR EN LA CONTABILIDAD"
-        public static MySqlConnection ObtenerConexion()
-        {
-            MySqlConnection conectar = new MySqlConnection("SERVER=" + "localhost" + ";PORT=3306" + ";DATABASE=" + "vivero" + ";UID=" + "root" + ";PWD=" + "root");
-            conectar.Open();
-            return conectar;
-        }
-        #endregion
-
-        # region GETTERS Y SETTERS DE CONTABILIDAD"
+        /// <summary>
+        /// Getters y setters de contabilidad
+        /// </summary>
         public int idContabilidad
         {
             get
@@ -71,6 +63,5 @@ namespace OncidiumSoft.Objetos
                 pGanancia_Perdida = value;
             }
         }
-        #endregion
     }
 }
